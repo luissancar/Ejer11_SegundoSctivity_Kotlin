@@ -12,6 +12,13 @@ class Main2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+        val  bundle:Bundle?=intent.extras
+
+        if (bundle != null) {
+            textView2.text=bundle.getString("texto")
+        }
+
+
         button2.setOnClickListener ()
         {
             val intent = Intent(this,MainActivity::class.java)
